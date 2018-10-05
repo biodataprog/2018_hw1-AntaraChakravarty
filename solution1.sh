@@ -22,7 +22,9 @@ NCU09477 4618.97
 NCU06911 4129.64
 NCU05567 3832.14
 NCU02250 3738.11
-
+curl -O https://biodataprog.github.io/2018_programming-intro/data/D_mel.63B12.gbk
+grep -c CDS D_mel.63B12.gbk
+17
 
 
 $ curl -O https://biodataprog.github.io/2018_programming-intro/data/codon_table.txt
