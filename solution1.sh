@@ -18,9 +18,16 @@ awk '{print $1, $6}' Nc3H.expr.tab > Nc20H.expr.sorted.tab
 
 sort -nrk2 Nc20H.expr.sorted.tab | head -10
 
-curl -O https://biodataprog.github.io/2018_programming-intro/data/D_mel.63B12.gbk
-grep -c CDS D_mel.63B12.gbk
-17
+# correct solution to homework 4
+
+curl -O https://biodataprog.github.io/2018_programming-intro/data/Nc3H.expr.tab
+
+(head -n 1 Nc3H.expr.tab  && tail -n +2 Nc3H.expr.tab | sort -k6,6nr ) > Nc3H.expr.sorted.tab
+
+head -n 11 Nc3H.expr.sorted.tab
+
+
+
 
 
 curl -O https://biodataprog.github.io/2018_programming-intro/data/codon_table.txt
